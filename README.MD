@@ -21,7 +21,7 @@ All directory and selections are saved on relaunch. The program will check the m
 
 BACKUPS of both the target and the source are created every time and put in the Backup folder at the executable. 
 
-Theoretically this should work for VITA, but that is untested.
+Theoretically this should work for vita, but that is untested.
 
 ### Alternatives
 If you're not using a PSP/vita device, check out [PPSSPP](https://www.ppsspp.org) emulator.
