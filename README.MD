@@ -19,6 +19,8 @@ Simply..
 
 All directory and selections are saved on relaunch. The program will check the modified timestamps to recommend what is the "Latest" save file and the predicted direction you may want to send the save. 
 
+BACKUPS of both the target and the source are created every time and put in the Backup folder at the executable. 
+
 Theoretically this should work for VITA, but that is untested.
 
 ### Alternatives
