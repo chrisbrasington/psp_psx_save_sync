@@ -1,5 +1,8 @@
 ### PSX <----> PSP Synchronization Ultility
 Autoconvert between VMP (PSP memory card format) and MCR (PSX memory card format) - bi-directional.
+
+![demo](img/demo.png)
+
 #### Credits:
 Mad props to [@dots-tb](https://github.com/dots-tb) for the [vita-mcr2vmp](https://github.com/dots-tb/vita-mcr2vmp) used within this application.
 #### Goal:
@@ -17,8 +20,6 @@ Simply..
 All directory and selections are saved on relaunch. The program will check the modified timestamps to recommend what is the "Latest" save file and the predicted direction you may want to send the save. 
 
 Theoretically this should work for VITA, but that is untested.
-
-![demo](img/demo.png)
 
 ### Alternatives
 If you're not using a PSP/vita device, check out [PPSSPP](https://www.ppsspp.org) emulator.
