@@ -1,0 +1,81 @@
+﻿<Window x:Class="PSPXSync.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PSPXSync"
+        mc:Ignorable="d"
+        Title="PSX &lt;--> PSP Sync Tool by @achristrophe" Height="792" Width="800"
+        ResizeMode="NoResize"
+        >
+    <Grid>
+
+
+        <StackPanel>
+            <GroupBox Header="PSX" Height="Auto" Width="Auto" Margin="0,0,415,0">
+
+                <StackPanel Height="Auto">
+                    <StackPanel Height="20">
+                        <Button Name="btnOpenFile" Click="btnPSXDirectory_Click">Select Emulator MemCard Directory</Button>
+                    </StackPanel>
+                    <StackPanel Height="20">
+                        <TextBlock x:Name="TextPSXDir">Not Selected</TextBlock>
+                    </StackPanel>
+                    <StackPanel Height="500">
+                        <ListView x:Name="ListEmuCards" Height="500" SelectionMode="Single" 
+                              SelectionChanged="ListEmuCards_SelectionChanged">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </StackPanel>
+                    <StackPanel Height="100">
+                        <Button x:Name="ButtonRunFromEmuToPsp" Content="Send to PSP ->" Click="ButtonRunFromEmuToPsp_Click"></Button>
+                        <StackPanel Height="100">
+                            <TextBox x:Name="TextEmu" BorderThickness="0" Text="" FontSize="30" TextWrapping="Wrap" Width="120"/>
+                        </StackPanel>
+                    </StackPanel>
+
+
+                </StackPanel>
+
+            </GroupBox>
+            <GroupBox Header="PSP" Height="Auto" Width="Auto" Margin="390,-664,10,0">
+                <StackPanel>
+                    <StackPanel Height="20">
+                        <Button x:Name="btnOpenFile2" Click="btnPSPDirectory_Click" Content="Select PSP Root Directory"/>
+                    </StackPanel>
+                    <StackPanel Height="20">
+                        <TextBlock x:Name="TextPSPDir"><Run Text="Not Selected"/></TextBlock>
+                    </StackPanel>
+                    <StackPanel Height="500">
+                        <ListView x:Name="ListPSPCards" Height="500" SelectionMode="Single" 
+                              
+                              SelectionChanged="ListPSPCards_SelectionChanged" >
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </StackPanel>
+                    <StackPanel Height="100">
+                        <Button x:Name="ButtonRunFromPspToEmu" Content="&lt;- Send to Emulator" Click="ButtonRunFromPspToEmu_Click"></Button>
+                        <StackPanel Height="100">
+                            <TextBox x:Name="TextPSP" BorderThickness="0" Text="" FontSize="30" TextWrapping="Wrap" Width="120"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <StackPanel>
+            <TextBox x:Name="Log" Text="" TextWrapping="Wrap" Margin="0,670,0,0" Height="100" ScrollViewer.VerticalScrollBarVisibility="Auto"  />
+
+        </StackPanel>
+
+    </Grid>
+
+
+</Window>
