@@ -19,7 +19,7 @@ namespace PSPXSync
                 return;
             }
 
-            if (!path.EndsWith("mcr") && !path.EndsWith("0.VMP"))
+            if(!path.Contains("."))
             {
                 foreach (string file in Directory.GetFiles(path))
                 {

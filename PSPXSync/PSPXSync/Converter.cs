@@ -17,7 +17,7 @@ namespace PSPXSync
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = $"/C {_conversionProgram} {arguments}" ;
+            startInfo.Arguments = $"/C {_conversionProgram} \"{arguments}\"" ;
             process.StartInfo = startInfo;
             process.Start();
 

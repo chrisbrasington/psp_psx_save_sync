@@ -29,9 +29,9 @@ namespace PSPXSync
                 return $"{this.Name} [{this.MemCard.Modified}]" ;
             }
 
-            if(this.Name == this.ID)
+            if(this.Name == this.ID || this.ID == "")
             {
-                return $"{this.Name} (unknown)";
+                return $"{this.Name}";
             }
             return $"{this.Name} ({this.ID}) [{this.MemCard.Modified}]";
         }

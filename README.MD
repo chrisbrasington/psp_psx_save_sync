@@ -1,5 +1,7 @@
 ### PSX Emulator <----> PS1 on PSP Synchronization Ultility
-Autoconvert between VMP (PS1 on PSP memory card format) and MCR (PSX/eSPXe memory card format) - bi-directional.
+Autoconvert between .VMP (PS1 on PSP memory card format) and .MCR/.SRM (PSX/eSPXe/PCSX-R memory card format) - bi-directional.
+
+Now supports retro-arch (.SRM) files found within %APPDATA%\Roaming\RetroArch\saves
 
 ![demo](img/demo.png)
 

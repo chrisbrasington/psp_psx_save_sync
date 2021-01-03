@@ -12,7 +12,7 @@
 
 
         <StackPanel>
-            <GroupBox Header="PSX" Height="Auto" Width="Auto" Margin="0,0,415,0">
+            <GroupBox Header="PSX (.MCR/.SRM extension)" Height="Auto" Width="Auto" Margin="0,0,415,0">
 
                 <StackPanel Height="Auto">
                     <StackPanel Height="20">
@@ -42,7 +42,7 @@
                 </StackPanel>
 
             </GroupBox>
-            <GroupBox Header="PSP" Height="Auto" Width="Auto" Margin="390,-664,10,0">
+            <GroupBox Header="PSP (.VMP extension)" Height="Auto" Width="Auto" Margin="390,-664,10,0">
                 <StackPanel>
                     <StackPanel Height="20">
                         <Button x:Name="btnOpenFile2" Click="btnPSPDirectory_Click" Content="Select PSP Root Directory"/>

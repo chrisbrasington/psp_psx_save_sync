@@ -151,16 +151,11 @@ namespace PSPXSync
 
                 foreach (string file in Directory.GetFiles(Settings.Get("PSXDIR").ToString()))
                 {
-                    if (file.EndsWith("mcr"))
-                    {
-                        //ListEmuCards.Items.Add(Path.GetFileName(file));
-                        games.Add(new Game(Path.GetFileName(file), "", file));
-
-
-
-                    }
+                    //if (file.EndsWith("mcr") || file.EndsWith("srm"))
+                    //{
+                    games.Add(new Game(Path.GetFileName(file), "", file));
+                    //}
                 }
-
 
                 if (Settings.Contains("EMUCARD"))
                 {
@@ -285,7 +280,7 @@ namespace PSPXSync
             {
                 Backup(false);
 
-                Log.Text += "\nConverting from MCR (PSX) to VMP (PSP)";
+                Log.Text += "\nConverting from MCR/SRM (PSX) to VMP (PSP)";
 
                 Log.Text += $"\nmcr2vmp.exe {activeEmuSelection.MemCard.Path}";
                 Converter.Run(activeEmuSelection.MemCard.Path);
@@ -319,7 +314,7 @@ namespace PSPXSync
             {
                 Backup(true);
 
-                Log.Text += "\nConverting from VMP (PSP) to MCR (PSX)";
+                Log.Text += $"\nConverting from VMP (PSP) to {Path.GetExtension(activeEmuSelection.MemCard.Path)} (PSX)";
 
                 Log.Text += $"\nmcr2vmp.exe {activePSPSelection.MemCard.Path}";
                 Converter.Run(activePSPSelection.MemCard.Path);
@@ -328,8 +323,9 @@ namespace PSPXSync
 
                 Log.Text += $"\nReplacing: {activeEmuSelection.MemCard.Path}";
                 File.Delete(activeEmuSelection.MemCard.Path);
+                
+                // use active extension in target
                 File.Move(activePSPSelection.MemCard.Path + ".mcr", activeEmuSelection.MemCard.Path);
-
             }
             catch (Exception ex)
             { 

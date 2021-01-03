@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/mcr2vmp/mcr2vmp/Debug
+/PSPXSync/PSPXSync/bin/Debug/net5.0-windows
+/PSPXSync/PSPXSync/obj
